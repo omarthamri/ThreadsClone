@@ -16,6 +16,7 @@
 		487C3EBB2AE7266E00C24325 /* ThreadsCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C3EBA2AE7266E00C24325 /* ThreadsCloneUITestsLaunchTests.swift */; };
 		487C3ED12AE7280600C24325 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C3ED02AE7280600C24325 /* LoginView.swift */; };
 		487C3ED32AE7348F00C24325 /* RegitrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C3ED22AE7348F00C24325 /* RegitrationView.swift */; };
+		4887B0B62AE8037600D614E9 /* ThreadsTextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B0B52AE8037600D614E9 /* ThreadsTextFieldModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		487C3EBA2AE7266E00C24325 /* ThreadsCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		487C3ED02AE7280600C24325 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		487C3ED22AE7348F00C24325 /* RegitrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegitrationView.swift; sourceTree = "<group>"; };
+		4887B0B52AE8037600D614E9 /* ThreadsTextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		487C3EC72AE7279100C24325 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4887B0B42AE8035A00D614E9 /* ViewModifiers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -203,6 +206,14 @@
 				487C3ED22AE7348F00C24325 /* RegitrationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4887B0B42AE8035A00D614E9 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4887B0B52AE8037600D614E9 /* ThreadsTextFieldModifiers.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 			files = (
 				487C3ED12AE7280600C24325 /* LoginView.swift in Sources */,
 				487C3EA02AE7266D00C24325 /* ContentView.swift in Sources */,
+				4887B0B62AE8037600D614E9 /* ThreadsTextFieldModifiers.swift in Sources */,
 				487C3E9E2AE7266D00C24325 /* ThreadsCloneApp.swift in Sources */,
 				487C3ED32AE7348F00C24325 /* RegitrationView.swift in Sources */,
 			);
