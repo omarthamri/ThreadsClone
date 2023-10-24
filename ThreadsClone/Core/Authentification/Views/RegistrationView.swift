@@ -1,5 +1,5 @@
 //
-//  RegitrationView.swift
+//  RegistrationView.swift
 //  ThreadsClone
 //
 //  Created by omar thamri on 24/10/2023.
@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct RegitrationView: View {
+struct RegistrationView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var fullName: String = ""
     @State private var userName: String = ""
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
             Spacer()
@@ -45,7 +46,9 @@ struct RegitrationView: View {
             .padding(.vertical)
             Spacer()
             Divider()
-            Button(action: {}, label: {
+            Button(action: {
+                dismiss()
+            }, label: {
                 HStack(spacing: 3) {
                     Text("Already have an account?")
                     Text("Sign In")
@@ -60,5 +63,5 @@ struct RegitrationView: View {
 }
 
 #Preview {
-    RegitrationView()
+    RegistrationView()
 }
