@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48602F302AE824F4009C2331 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48602F2F2AE824F4009C2331 /* ThreadCell.swift */; };
 		487C3E9E2AE7266D00C24325 /* ThreadsCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C3E9D2AE7266D00C24325 /* ThreadsCloneApp.swift */; };
 		487C3EA02AE7266D00C24325 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C3E9F2AE7266D00C24325 /* ContentView.swift */; };
 		487C3EA22AE7266E00C24325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487C3EA12AE7266E00C24325 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48602F2F2AE824F4009C2331 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		487C3E9A2AE7266D00C24325 /* ThreadsClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadsClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487C3E9D2AE7266D00C24325 /* ThreadsCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsCloneApp.swift; sourceTree = "<group>"; };
 		487C3E9F2AE7266D00C24325 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				4887B0BD2AE8100D00D614E9 /* FeedView.swift */,
+				48602F2F2AE824F4009C2331 /* ThreadCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				4887B0BE2AE8100D00D614E9 /* FeedView.swift in Sources */,
 				487C3ED12AE7280600C24325 /* LoginView.swift in Sources */,
 				487C3EA02AE7266D00C24325 /* ContentView.swift in Sources */,
+				48602F302AE824F4009C2331 /* ThreadCell.swift in Sources */,
 				4887B0C92AE8113900D614E9 /* ActivityView.swift in Sources */,
 				4887B0C52AE810B600D614E9 /* CreateThreadView.swift in Sources */,
 				4887B0BA2AE8062E00D614E9 /* ThreadsTabView.swift in Sources */,
