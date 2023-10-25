@@ -12,6 +12,8 @@
 		485DD26A2AE975B80053BA1A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 485DD2692AE975B80053BA1A /* FirebaseFirestore */; };
 		485DD26C2AE975B80053BA1A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 485DD26B2AE975B80053BA1A /* FirebaseFirestoreSwift */; };
 		485DD26E2AE975B80053BA1A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 485DD26D2AE975B80053BA1A /* FirebaseStorage */; };
+		485DD2722AE978D20053BA1A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DD2712AE978D20053BA1A /* RegistrationViewModel.swift */; };
+		485DD2742AE97ADF0053BA1A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DD2732AE97ADF0053BA1A /* AuthService.swift */; };
 		48602F302AE824F4009C2331 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48602F2F2AE824F4009C2331 /* ThreadCell.swift */; };
 		48602F332AE8320F009C2331 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48602F322AE8320F009C2331 /* CircularProfileImageView.swift */; };
 		48602F352AE832DE009C2331 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48602F342AE832DE009C2331 /* UserCell.swift */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		485DD2642AE9753F0053BA1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		485DD2712AE978D20053BA1A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		485DD2732AE97ADF0053BA1A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		48602F2F2AE824F4009C2331 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		48602F322AE8320F009C2331 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		48602F342AE832DE009C2331 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -109,6 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485DD26F2AE9782E0053BA1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				485DD2712AE978D20053BA1A /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		485DD2702AE9783E0053BA1A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				485DD2732AE97ADF0053BA1A /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		48602F312AE831EE009C2331 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +264,8 @@
 		487C3ECD2AE727E000C24325 /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
+				485DD2702AE9783E0053BA1A /* Service */,
+				485DD26F2AE9782E0053BA1A /* ViewModel */,
 				487C3ECF2AE727F700C24325 /* Views */,
 			);
 			path = Authentification;
@@ -513,7 +535,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4887B0BE2AE8100D00D614E9 /* FeedView.swift in Sources */,
+				485DD2722AE978D20053BA1A /* RegistrationViewModel.swift in Sources */,
 				487C3ED12AE7280600C24325 /* LoginView.swift in Sources */,
+				485DD2742AE97ADF0053BA1A /* AuthService.swift in Sources */,
 				48C5F5E02AE878DE003B262A /* EditProfileView.swift in Sources */,
 				487C3EA02AE7266D00C24325 /* ContentView.swift in Sources */,
 				48602F302AE824F4009C2331 /* ThreadCell.swift in Sources */,
