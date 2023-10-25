@@ -27,6 +27,7 @@
 		4887B0C52AE810B600D614E9 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B0C42AE810B600D614E9 /* CreateThreadView.swift */; };
 		4887B0C92AE8113900D614E9 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B0C82AE8113900D614E9 /* ActivityView.swift */; };
 		4887B0CD2AE8117A00D614E9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B0CC2AE8117A00D614E9 /* ProfileView.swift */; };
+		48C5F5E02AE878DE003B262A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C5F5DF2AE878DE003B262A /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		4887B0C42AE810B600D614E9 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		4887B0C82AE8113900D614E9 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		4887B0CC2AE8117A00D614E9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		48C5F5DF2AE878DE003B262A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 		4887B0CA2AE8116600D614E9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				48C5F5DD2AE878AD003B262A /* EditProfile */,
 				48602F362AE83695009C2331 /* Model */,
 				4887B0CB2AE8116D00D614E9 /* View */,
 			);
@@ -338,6 +341,22 @@
 			isa = PBXGroup;
 			children = (
 				4887B0CC2AE8117A00D614E9 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48C5F5DD2AE878AD003B262A /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				48C5F5DE2AE878CF003B262A /* View */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		48C5F5DE2AE878CF003B262A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48C5F5DF2AE878DE003B262A /* EditProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +493,7 @@
 			files = (
 				4887B0BE2AE8100D00D614E9 /* FeedView.swift in Sources */,
 				487C3ED12AE7280600C24325 /* LoginView.swift in Sources */,
+				48C5F5E02AE878DE003B262A /* EditProfileView.swift in Sources */,
 				487C3EA02AE7266D00C24325 /* ContentView.swift in Sources */,
 				48602F302AE824F4009C2331 /* ThreadCell.swift in Sources */,
 				4887B0C92AE8113900D614E9 /* ActivityView.swift in Sources */,
