@@ -23,10 +23,10 @@ struct ProfileView: View {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading,spacing: 12) {
                             VStack(alignment: .leading,spacing: 4) {
-                                Text("Dwight Schrute")
+                                Text(viewModel.currentUser?.fullname ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
-                                Text("dwight.schrute")
+                                Text(viewModel.currentUser?.username ?? "")
                                     .font(.subheadline)
                                 Text("Senior salesman for dunder mufflin")
                                     .font(.footnote)
