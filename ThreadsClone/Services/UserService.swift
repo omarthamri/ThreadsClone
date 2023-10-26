@@ -25,4 +25,7 @@ class UserService {
         self.currentUser = try snapshot.data(as: User.self)
     }
     
+    func reset() {
+        self.currentUser = nil
+    }
 }
