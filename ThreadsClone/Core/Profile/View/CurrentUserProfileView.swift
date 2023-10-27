@@ -1,34 +1,37 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfile.swift
 //  ThreadsClone
 //
-//  Created by omar thamri on 24/10/2023.
+//  Created by omar thamri on 27/10/2023.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct CurrentUserProfileView: View {
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
+    @StateObject private var viewModel = CurrentUserProfileViewModel()
     private var filterBarWidth: CGFloat {
         var count: CGFloat = CGFloat(ProfileThreadFilter.allCases.count)
         return (UIScreen.main.bounds.width / count) - 20
     }
-    @StateObject private var viewModel = ProfileViewModel()
-    let user: User
+    private var currentUser: User? {
+        return viewModel.currentUser
+    }
     var body: some View {
+        NavigationStack {
             ScrollView(showsIndicators: false) {
                 // Bio and stats
                 VStack(spacing: 20) {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading,spacing: 12) {
                             VStack(alignment: .leading,spacing: 4) {
-                                Text(user.fullname ?? "")
+                                Text(currentUser?.fullname ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
-                                Text(user.username ?? "")
+                                Text(currentUser?.username ?? "")
                                     .font(.subheadline)
-                                if let bio = user.bio {
+                                if let bio = currentUser?.bio {
                                     Text(bio)
                                         .font(.footnote)
                                 }
@@ -99,8 +102,9 @@ struct ProfileView: View {
                 }
             }
         }
+    }
 }
 
 #Preview {
-    ProfileView(user: .init(id: UUID().uuidString, username: "Michael Scott", email: "michael.scott@gmail.com", fullname: "Michael Scott"))
+    CurrentUserProfileView()
 }

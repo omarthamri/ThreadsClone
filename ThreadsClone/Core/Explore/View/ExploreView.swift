@@ -23,7 +23,7 @@ struct ExploreView: View {
                             .padding(.vertical,4)
                         }
                         .navigationDestination(for: User.self) { user in
-                            ProfileView()
+                            ProfileView(user: user)
                         }
                     }
                 }
