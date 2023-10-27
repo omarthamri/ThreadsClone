@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct CurrentUserProfileView: View {
-    @State private var selectedFilter: ProfileThreadFilter = .threads
-    @Namespace var animation
     @StateObject private var viewModel = CurrentUserProfileViewModel()
-    private var filterBarWidth: CGFloat {
-        var count: CGFloat = CGFloat(ProfileThreadFilter.allCases.count)
-        return (UIScreen.main.bounds.width / count) - 20
-    }
     private var currentUser: User? {
         return viewModel.currentUser
     }
@@ -23,69 +17,22 @@ struct CurrentUserProfileView: View {
             ScrollView(showsIndicators: false) {
                 // Bio and stats
                 VStack(spacing: 20) {
-                    HStack(alignment: .top) {
-                        VStack(alignment: .leading,spacing: 12) {
-                            VStack(alignment: .leading,spacing: 4) {
-                                Text(currentUser?.fullname ?? "")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
-                                Text(currentUser?.username ?? "")
-                                    .font(.subheadline)
-                                if let bio = currentUser?.bio {
-                                    Text(bio)
-                                        .font(.footnote)
-                                }
-                                Text("2 followers")
-                                    .foregroundStyle(.gray)
-                                    .font(.caption)
-                            }
-                            
-                        }
-                        Spacer()
-                        CircularProfileImageView()
-                    }
+                        ProfileHeaderView(user: currentUser)
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Login")
+                        Text("Edit profile")
                             .font(.subheadline)
                             .fontWeight(.semibold)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.black)
                             .frame(width: 354, height: 32)
-                            .background(.black)
+                            .background(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color(.systemGray4),lineWidth: 1)
+                            }
                     })
                     // user content list view
-                    VStack {
-                        HStack {
-                            ForEach(ProfileThreadFilter.allCases) { filter in
-                                VStack {
-                                    Text(filter.title)
-                                        .font(.subheadline)
-                                    .fontWeight(selectedFilter == filter ? .semibold : .regular)
-                                    if selectedFilter == filter {
-                                        Rectangle()
-                                            .frame(width: filterBarWidth, height: 1)
-                                            .foregroundStyle(.black)
-                                            .matchedGeometryEffect(id: "item", in: animation)
-                                    } else {
-                                        Rectangle()
-                                            .frame(width: filterBarWidth, height: 1)
-                                            .foregroundStyle(.clear)
-                                    }
-                                }
-                                .onTapGesture {
-                                    withAnimation(.spring) {
-                                        selectedFilter = filter
-                                    }
-                                }
-                                
-                            }
-                        }
-                        LazyVStack {
-                            ForEach(0..<10,id: \.self) { thread in
-                              ThreadCell()
-                            }
-                        }
-                    }
+                    UserContentListView()
                     .padding(.vertical,8)
                 }
             }
