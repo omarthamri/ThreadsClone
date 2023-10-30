@@ -19,8 +19,8 @@ struct ThreadService {
     
     static func fetchThreads() async throws -> [Thread] {
         
-        let snapshot = try await Firestore.firestore().collection("threads").order(by: "timestamp",descending: true)
-        
+        let snapshot = try await Firestore.firestore().collection("threads").order(by: "timestamp",descending: true).getDocuments()
+        return snapshot.documents.compactMap({try? $0.data(as: Thread.self) })
     }
     
     
