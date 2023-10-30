@@ -35,8 +35,10 @@ struct CurrentUserProfileView: View {
                             }
                     })
                     // user content list view
-                    UserContentListView()
-                    .padding(.vertical,8)
+                    if let user = currentUser {
+                        UserContentListView(user: user)
+                            .padding(.vertical,8)
+                    }
                 }
             }
             .padding(.horizontal)
