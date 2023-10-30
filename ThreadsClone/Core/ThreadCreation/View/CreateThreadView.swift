@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct CreateThreadView: View {
-    @State private var caption: String = ""
+    @StateObject var viewModel = CreateThreadViewModel()
     @Environment(\.dismiss) var dismiss
+    var user: User? {
+        return UserService.shared.currentUser
+    }
     var body: some View {
         NavigationStack {
             VStack {
                 HStack(alignment: .top) {
-                    CircularProfileImageView(user: nil, size: .small)
+                    CircularProfileImageView(user: user, size: .small)
                     VStack(alignment: .leading,spacing: 4) {
-                        Text("Dwight Schrute")
+                        Text(user?.fullname ?? "unkonwn")
                             .fontWeight(.semibold)
-                        TextField("start a thread",text: $caption,axis: .vertical)
+                        TextField("start a thread",text: $viewModel.caption,axis: .vertical)
                     }
                     .font(.footnote)
                     Spacer()
-                    if !caption.isEmpty {
+                    if !viewModel.caption.isEmpty {
                         Button(action: {
-                            caption = ""
+                            viewModel.caption = ""
                         }, label: {
                             Image(systemName: "xmark")
                                 .resizable()
@@ -46,13 +49,16 @@ struct CreateThreadView: View {
                     }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Post") {
-                        
+                        Task {
+                            try await viewModel.uploadThread()
+                            dismiss()
+                        }
                     }
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
-                    .opacity(caption.isEmpty ? 0.5 : 1)
-                    .disabled(caption.isEmpty)
+                    .opacity(viewModel.caption.isEmpty ? 0.5 : 1)
+                    .disabled(viewModel.caption.isEmpty)
                 }
             }
             .navigationTitle("New Thread")
